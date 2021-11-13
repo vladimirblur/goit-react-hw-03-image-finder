@@ -8,7 +8,7 @@ export default class ImageApi {
       image_type: 'photo',
       orientation: 'horizontal',
       page: page,
-      per_page: 12,
+      per_page: 15,
     });
     const url = `${BASE_URL}?${searchParams}`;
 

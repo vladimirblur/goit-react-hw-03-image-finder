@@ -84,12 +84,11 @@ class App extends Component {
   };
 
   render() {
-    const { searchQuery, images, status, currentImage } = this.state;
-    console.log(document.documentElement);
+    const { images, status, currentImage } = this.state;
     return (
       <div className="App">
         <Searchbar onSubmit={this.handleSearchSubmit} />
-        <ImageGallery searchedName={searchQuery}>
+        <ImageGallery>
           {status === 'resolved' && (
             <ImageGalleryItem images={images} onClick={this.handleClickImage} />
           )}

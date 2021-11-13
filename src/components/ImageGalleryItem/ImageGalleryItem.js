@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from './ImageGalleryItem.module.css';
 
 export default function ImageGalleryItem({ images, onClick }) {
@@ -13,3 +14,14 @@ export default function ImageGalleryItem({ images, onClick }) {
     </li>
   ));
 }
+
+ImageGalleryItem.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      webformatURL: PropTypes.string.isRequired,
+      largeImageURL: PropTypes.string.isRequired,
+      tags: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
